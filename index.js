@@ -81,24 +81,39 @@ function ClickMe() {
 
 // menu.insertBefore(li, menu.firstElementChild)
 
-let app = document.querySelector("#menu")
-let names = ["Eshan", "MIshan", "fishaan"]
+// let app = document.querySelector("#menu")
+// let names = ["Eshan", "MIshan", "fishaan"]
 
-let DOMScript = names.map((names)=>{
-  let li = document.createElement("li");
-  li.textContent = names;
-  return li;
-})
-app.append(...DOMScript);
+// let DOMScript = names.map((names)=>{
+//   let li = document.createElement("li");
+//   li.textContent = names;
+//   return li;
+// })
+// app.append(...DOMScript);
 
 
 
-let apps = document.querySelector("#menus");
-let lan = ["typescript", "python", "javascript", "go"];
+// let apps = document.querySelector("#menus");
+// let lan = ["typescript", "python", "javascript", "go"];
 
-let details = lan.map((languages)=>{
-  let li =document.createElement("li");
-  li.innerHTML = languages;
-  return li;
-})
-apps.prepend(...details);
+// let details = lan.map((languages)=>{
+//   let li =document.createElement("li");
+//   li.innerHTML = languages;
+//   return li;
+// })
+// apps.prepend(...details);
+
+let menu = document.querySelector("#menu")
+
+// let li = document.createElement("li");
+// li.textContent = ["Home","mome"];
+// menu.replaceChild(li, menu.lastElementChild);
+
+// menu.removeChild(menu.firstElementChild)
+// menu.removeChild(menu.lastElementChild)
+
+let cloneNode = menu.cloneNode(true);
+
+cloneNode.id = "cloneId"
+
+document.body.appendChild(cloneNode)
