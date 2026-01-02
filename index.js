@@ -59,16 +59,24 @@ function ClickMe() {
 // script.src = "script.js";
 // document.body.appendChild(script);
 
+// let menu = document.querySelector("#menu");
+
+// let lang = ["HTML", "CSS", "JavaScript", "Python", "Java"];
+
+// let fragment = document.createDocumentFragment();
+
+// lang.forEach((Language) => {
+//   let li = document.createElement("li");
+//   li.textContent = Language;
+//   fragment.appendChild(li);
+// });
+
+// menu.appendChild(fragment);
+
+
 let menu = document.querySelector("#menu");
 
-let lang = ["HTML", "CSS", "JavaScript", "Python", "Java"];
+let li = document.createElement("li");
+li.textContent = "Home";
 
-let fragment = document.createDocumentFragment();
-
-lang.forEach((Language) => {
-  let li = document.createElement("li");
-  li.textContent = Language;
-  fragment.appendChild(li);
-});
-
-menu.appendChild(fragment);
+menu.insertBefore(li, menu.firstElementChild)
