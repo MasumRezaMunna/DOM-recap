@@ -74,9 +74,31 @@ function ClickMe() {
 // menu.appendChild(fragment);
 
 
-let menu = document.querySelector("#menu");
+// let menu = document.querySelector("#menu");
 
-let li = document.createElement("li");
-li.textContent = "Home";
+// let li = document.createElement("li");
+// li.textContent = "Home";
 
-menu.insertBefore(li, menu.firstElementChild)
+// menu.insertBefore(li, menu.firstElementChild)
+
+let app = document.querySelector("#menu")
+let names = ["Eshan", "MIshan", "fishaan"]
+
+let DOMScript = names.map((names)=>{
+  let li = document.createElement("li");
+  li.textContent = names;
+  return li;
+})
+app.append(...DOMScript);
+
+
+
+let apps = document.querySelector("#menus");
+let lan = ["typescript", "python", "javascript", "go"];
+
+let details = lan.map((languages)=>{
+  let li =document.createElement("li");
+  li.innerHTML = languages;
+  return li;
+})
+apps.prepend(...details);
