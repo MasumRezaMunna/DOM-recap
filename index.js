@@ -141,6 +141,16 @@ function ClickMe() {
 // menu.style.width = "20%"
 
 
-let menu = document.querySelector("#menu");
-let style = getComputedStyle(menu, "::first-letter");
-console.log(style.fontWeight)
+// let menu = document.querySelector("#menu");
+// let style = getComputedStyle(menu, "::first-letter");
+// console.log(style.fontWeight)
+
+
+
+// let h2 = document.querySelector("h2");
+
+// console.log(h2.className) 
+
+let menu = document.querySelector("#menu")
+menu.classList.add("munna", "hablu", "bhaia")
+menu.classList.remove("bhaia")
