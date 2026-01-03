@@ -135,7 +135,12 @@ function ClickMe() {
 
 // console.log(btn.hasAttribute("class"))
 
-let menu = document.querySelector("#menu")
-menu.style.color = "red"
-menu.style.backgroundColor = "yellow"
-menu.style.width = "20%"
+// let menu = document.querySelector("#menu")
+// menu.style.color = "red"
+// menu.style.backgroundColor = "yellow"
+// menu.style.width = "20%"
+
+
+let menu = document.querySelector("#menu");
+let style = getComputedStyle(menu, "::first-letter");
+console.log(style.fontWeight)
