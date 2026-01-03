@@ -103,7 +103,7 @@ function ClickMe() {
 // })
 // apps.prepend(...details);
 
-let menu = document.querySelector("#menu")
+// let menu = document.querySelector("#menu")
 
 // let li = document.createElement("li");
 // li.textContent = ["Home","mome"];
@@ -112,8 +112,26 @@ let menu = document.querySelector("#menu")
 // menu.removeChild(menu.firstElementChild)
 // menu.removeChild(menu.lastElementChild)
 
-let cloneNode = menu.cloneNode(true);
+// let cloneNode = menu.cloneNode(true);
 
-cloneNode.id = "cloneId"
+// cloneNode.id = "cloneId"
 
-document.body.appendChild(cloneNode)
+// document.body.appendChild(cloneNode)
+
+// let btn = document.querySelector("#btn");
+// if(btn){
+//   btn.setAttribute("name", "pAYEL")
+// }
+
+let btn = document.querySelector("#btn");
+
+// if(btn){
+//   let target = btn.getAttribute("target");
+//   console.log(target);
+// }
+
+// let removeButton = btn.hasAttribute("target");
+// console.log(removeButton);
+
+// console.log(btn.hasAttribute("class"))
+
