@@ -123,7 +123,7 @@ function ClickMe() {
 //   btn.setAttribute("name", "pAYEL")
 // }
 
-let btn = document.querySelector("#btn");
+// let btn = document.querySelector("#btn");
 
 // if(btn){
 //   let target = btn.getAttribute("target");
@@ -135,3 +135,7 @@ let btn = document.querySelector("#btn");
 
 // console.log(btn.hasAttribute("class"))
 
+let menu = document.querySelector("#menu")
+menu.style.color = "red"
+menu.style.backgroundColor = "yellow"
+menu.style.width = "20%"
