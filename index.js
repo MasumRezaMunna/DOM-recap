@@ -185,3 +185,25 @@ function ClickMe() {
 //   e.preventDefault();
 //   e.returnValue = ''
 // })
+
+let track = document.querySelector("#track")
+
+// track.addEventListener("mousedown", (e) => {
+//   console.log(e.type)
+// })
+// track.addEventListener("mouseup", (e) => {
+//   console.log(e.type)
+// })
+// track.addEventListener("click", (e) => {
+//   console.log(e.type)
+// })
+
+function mouseEvent(e){
+  console.log(e.type)
+}
+
+track.addEventListener("mousedown", mouseEvent)
+track.addEventListener("mouseup", mouseEvent)
+track.addEventListener("click", mouseEvent)
+track.addEventListener("dblclick", mouseEvent)
+track.addEventListener("mouseover", mouseEvent)
