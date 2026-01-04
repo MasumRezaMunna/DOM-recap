@@ -156,12 +156,17 @@ function ClickMe() {
 // menu.classList.remove("bhaia")
 
 
-let btn = document.querySelector("#btn");
+// let btn = document.querySelector("#btn");
 
 // btn.addEventListener("click", function(e){
 //   alert("Button was clicked")
 // })
 
-function clicked (){
-  alert("The Button Was Clicked")
+// function clicked (){
+//   alert("The Button Was Clicked")
+// }
+
+let btn = document.querySelector("#btn")
+btn.onclick = function(){
+  alert("This Message From DOM 0 label Handler")
 }
