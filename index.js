@@ -151,6 +151,17 @@ function ClickMe() {
 
 // console.log(h2.className) 
 
-let menu = document.querySelector("#menu")
-menu.classList.add("munna", "hablu", "bhaia")
-menu.classList.remove("bhaia")
+// let menu = document.querySelector("#menu")
+// menu.classList.add("munna", "hablu", "bhaia")
+// menu.classList.remove("bhaia")
+
+
+let btn = document.querySelector("#btn");
+
+// btn.addEventListener("click", function(e){
+//   alert("Button was clicked")
+// })
+
+function clicked (){
+  alert("The Button Was Clicked")
+}
