@@ -166,7 +166,22 @@ function ClickMe() {
 //   alert("The Button Was Clicked")
 // }
 
-let btn = document.querySelector("#btn")
-btn.onclick = function(){
-  alert("This Message From DOM 0 label Handler")
-}
+// let btn = document.querySelector("#btn")
+// btn.onclick = function(){
+//   alert("This Message From DOM 0 label Handler")
+// }
+
+
+// document.addEventListener("DOMContentLoaded", (e)=>{
+//   alert("DOM Is Fully Loaded")
+// })
+
+// addEventListener("load", ()=>{
+//   alert("content is loaded")
+// })
+
+
+// addEventListener("beforeunload", (e)=>{
+//   e.preventDefault();
+//   e.returnValue = ''
+// })
