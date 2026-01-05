@@ -241,11 +241,60 @@
 //   scroller = NewScroller;
 // })
 
-const MyInput = document.querySelector("#MyInput")
+// const MyInput = document.querySelector("#MyInput")
 
-MyInput.addEventListener("focus", (e) =>{
-  e.target.style.backgroundColor = "red";
-})
-MyInput.addEventListener("blur", (e) =>{
-  e.target.style.backgroundColor = "yellow";
+// MyInput.addEventListener("focus", (e) =>{
+//   e.target.style.backgroundColor = "red";
+// })
+// MyInput.addEventListener("blur", (e) =>{
+//   e.target.style.backgroundColor = "yellow";
+// })
+
+let Username = document.querySelector("#Username")
+let email = document.querySelector("#email")
+let password = document.querySelector("#password")
+let password2 = document.querySelector("#password2")
+let Form = document.querySelector("#Form")
+
+// console.log(Username)
+
+function ShowError(input, message) {
+  const FormContain = input.ParentElement
+  FormContain.className = "form-contain error"
+  const small = FormContain.querySelector("small")
+  small.innerText = message;
+}
+
+function ShowSuccess (input){
+  const FormContain = input.parentElement
+  FormContain.className = "form-contain success"
+}
+
+function CheckInputLength(input,min,max){
+  if(input.value.length < min){
+    ShowError(input, `${GetFieldName (input)} You Must Be At Least ${min} Characters`)
+  }
+  else if(input.value.length > max){
+    ShowError(input, `${GetFieldName (input)} You Must Be At Least ${max} Characters`)
+  }else{
+    ShowSuccess(input)
+  }
+}
+
+function GetFieldName (input){
+    return input.id.charAt(0).toUpperCase()+input.id.slice(1);
+}
+
+function CheckPassWordMatch (input1, input2){
+  if(input1.value !== input2.value){
+    ShowError(input2, "Password is not same")
+  }
+}
+
+Form.addEventListener("submit", (e)=>{
+  e.preventDefault();
+
+  CheckInputLength(Username, 3, 20)
+  CheckInputLength(password, 6, 30)
+  CheckPassWordMatch(password, password2)
 })

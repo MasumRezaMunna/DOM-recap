@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM recap</title>
+    <link rel="stylesheet" href="style.css">
     <!-- <style>
         p::first-letter{
             width: 300px;
@@ -45,7 +46,34 @@
 
     </div> -->
 
-    <input type="text" id="MyInput">
+    <!-- <input type="text" id="MyInput"> -->
+
+    <form action="" method="post" id="Form">
+      <div class="container">
+        <h2>registration form </h2>
+        <div class="form-contain">
+          <label for="Username">Username</label>
+          <input type="text" id="Username" placeholder="enter your user name">
+          <small>error message</small>
+        </div>
+        <div class="form-contain">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="enter your user email">
+          <small>error message</small>
+        </div>
+        <div class="form-contain">
+          <label for="password">Password</label>
+          <input type="text" id="password" placeholder="enter your user password">
+          <small>error message</small>
+        </div>
+        <div class="form-contain">
+          <label for="password2">Password</label>
+          <input type="text" id="password2" placeholder="enter your user password2">
+          <small>error message</small>
+        </div>
+        <button class="btn">Submit</button>
+      </div>
+    </form>
 
 
 
