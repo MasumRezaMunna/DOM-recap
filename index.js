@@ -73,7 +73,6 @@
 
 // menu.appendChild(fragment);
 
-
 // let menu = document.querySelector("#menu");
 
 // let li = document.createElement("li");
@@ -90,8 +89,6 @@
 //   return li;
 // })
 // app.append(...DOMScript);
-
-
 
 // let apps = document.querySelector("#menus");
 // let lan = ["typescript", "python", "javascript", "go"];
@@ -140,21 +137,17 @@
 // menu.style.backgroundColor = "yellow"
 // menu.style.width = "20%"
 
-
 // let menu = document.querySelector("#menu");
 // let style = getComputedStyle(menu, "::first-letter");
 // console.log(style.fontWeight)
 
-
-
 // let h2 = document.querySelector("h2");
 
-// console.log(h2.className) 
+// console.log(h2.className)
 
 // let menu = document.querySelector("#menu")
 // menu.classList.add("munna", "hablu", "bhaia")
 // menu.classList.remove("bhaia")
-
 
 // let btn = document.querySelector("#btn");
 
@@ -171,7 +164,6 @@
 //   alert("This Message From DOM 0 label Handler")
 // }
 
-
 // document.addEventListener("DOMContentLoaded", (e)=>{
 //   alert("DOM Is Fully Loaded")
 // })
@@ -179,7 +171,6 @@
 // addEventListener("load", ()=>{
 //   alert("content is loaded")
 // })
-
 
 // addEventListener("beforeunload", (e)=>{
 //   e.preventDefault();
@@ -208,8 +199,6 @@
 // track.addEventListener("dblclick", mouseEvent)
 // track.addEventListener("mouseover", mouseEvent)
 
-
-
 // let message = document.querySelector("#message")
 
 // function EventName(e) {
@@ -218,11 +207,9 @@
 // message.addEventListener("keyup", EventName)
 // message.addEventListener("keydown", EventName)
 
-
 // window.onscroll = () =>{
 //   console.log("scrolled")
 // }
-
 
 // window.addEventListener("scroll", ()=>{
 //   console.log("scrolled")
@@ -250,51 +237,76 @@
 //   e.target.style.backgroundColor = "yellow";
 // })
 
-let Username = document.querySelector("#Username")
-let email = document.querySelector("#email")
-let password = document.querySelector("#password")
-let password2 = document.querySelector("#password2")
-let Form = document.querySelector("#Form")
+// let Username = document.querySelector("#Username")
+// let email = document.querySelector("#email")
+// let password = document.querySelector("#password")
+// let password2 = document.querySelector("#password2")
+// let Form = document.querySelector("#Form")
 
 // console.log(Username)
 
-function ShowError(input, message) {
-  const FormContain = input.ParentElement
-  FormContain.className = "form-contain error"
-  const small = FormContain.querySelector("small")
-  small.innerText = message;
+// function ShowError(input, message) {
+//   const FormContain = input.ParentElement
+//   FormContain.className = "form-contain error"
+//   const small = FormContain.querySelector("small")
+//   small.innerText = message;
+// }
+
+// function ShowSuccess (input){
+//   const FormContain = input.parentElement
+//   FormContain.className = "form-contain success"
+// }
+
+// function CheckInputLength(input,min,max){
+//   if(input.value.length < min){
+//     ShowError(input, `${GetFieldName (input)} You Must Be At Least ${min} Characters`)
+//   }
+//   else if(input.value.length > max){
+//     ShowError(input, `${GetFieldName (input)} You Must Be At Least ${max} Characters`)
+//   }else{
+//     ShowSuccess(input)
+//   }
+// }
+
+// function GetFieldName (input){
+//     return input.id.charAt(0).toUpperCase()+input.id.slice(1);
+// }
+
+// function CheckPassWordMatch (input1, input2){
+//   if(input1.value !== input2.value){
+//     ShowError(input2, "Password is not same")
+//   }
+// }
+
+// Form.addEventListener("submit", (e)=>{
+//   e.preventDefault();
+
+//   CheckInputLength(Username, 3, 20)
+//   CheckInputLength(password, 6, 30)
+//   CheckPassWordMatch(password, password2)
+// })
+
+const group = document.querySelector(".group");
+const output = document.querySelector(".output");
+
+const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
+
+group.innerHTML = sizes.map((size) =>`<div>
+    <input type="radio" id="${size}" value="${size}" name="size">
+    <label for="${size}">${size}</label>
+
+  </div>`
+).join(" ");
+
+const RadioButton = document.querySelectorAll("input")
+
+for (const radioBtn of RadioButton){
+  radioBtn.addEventListener("change", ShowOutput)
 }
 
-function ShowSuccess (input){
-  const FormContain = input.parentElement
-  FormContain.className = "form-contain success"
-}
-
-function CheckInputLength(input,min,max){
-  if(input.value.length < min){
-    ShowError(input, `${GetFieldName (input)} You Must Be At Least ${min} Characters`)
+function ShowOutput (e){
+  console.log(e);
+  if(this.checked){
+    document.querySelector(".output").innerHTML = `You Selected ${this.value}`
   }
-  else if(input.value.length > max){
-    ShowError(input, `${GetFieldName (input)} You Must Be At Least ${max} Characters`)
-  }else{
-    ShowSuccess(input)
-  }
 }
-
-function GetFieldName (input){
-    return input.id.charAt(0).toUpperCase()+input.id.slice(1);
-}
-
-function CheckPassWordMatch (input1, input2){
-  if(input1.value !== input2.value){
-    ShowError(input2, "Password is not same")
-  }
-}
-
-Form.addEventListener("submit", (e)=>{
-  e.preventDefault();
-
-  CheckInputLength(Username, 3, 20)
-  CheckInputLength(password, 6, 30)
-  CheckPassWordMatch(password, password2)
-})
