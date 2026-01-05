@@ -228,15 +228,24 @@
 //   console.log("scrolled")
 // })
 
-let scroller = 0;
+// let scroller = 0;
 
-window.addEventListener("scroll", ()=>{
-  let NewScroller = window.scrollYoffset || document.documentElement.scrollTop
-  // if(window.scrollYoffset || document.documentElement.scrollTop > scroller){
-  if(NewScroller > scroller){
-    console.log("scroll is down")
-  }else{
-    console.log("scroll is up")
-  }
-  scroller = NewScroller;
+// window.addEventListener("scroll", ()=>{
+//   let NewScroller = window.scrollYoffset || document.documentElement.scrollTop
+//   // if(window.scrollYoffset || document.documentElement.scrollTop > scroller){
+//   if(NewScroller > scroller){
+//     console.log("scroll is down")
+//   }else{
+//     console.log("scroll is up")
+//   }
+//   scroller = NewScroller;
+// })
+
+const MyInput = document.querySelector("#MyInput")
+
+MyInput.addEventListener("focus", (e) =>{
+  e.target.style.backgroundColor = "red";
+})
+MyInput.addEventListener("blur", (e) =>{
+  e.target.style.backgroundColor = "yellow";
 })
