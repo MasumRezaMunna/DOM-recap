@@ -1,6 +1,6 @@
-function ClickMe() {
-  document.getElementById("demo").innerHTML = Date();
-}
+// function ClickMe() {
+//   document.getElementById("demo").innerHTML = Date();
+// }
 
 // let div = document.createElement("div");
 // div.innerHTML = "<p>Hello, this is a new div!</p>";
@@ -217,3 +217,26 @@ function ClickMe() {
 // }
 // message.addEventListener("keyup", EventName)
 // message.addEventListener("keydown", EventName)
+
+
+// window.onscroll = () =>{
+//   console.log("scrolled")
+// }
+
+
+// window.addEventListener("scroll", ()=>{
+//   console.log("scrolled")
+// })
+
+let scroller = 0;
+
+window.addEventListener("scroll", ()=>{
+  let NewScroller = window.scrollYoffset || document.documentElement.scrollTop
+  // if(window.scrollYoffset || document.documentElement.scrollTop > scroller){
+  if(NewScroller > scroller){
+    console.log("scroll is down")
+  }else{
+    console.log("scroll is up")
+  }
+  scroller = NewScroller;
+})
