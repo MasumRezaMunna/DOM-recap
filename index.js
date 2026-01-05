@@ -286,27 +286,41 @@
 //   CheckPassWordMatch(password, password2)
 // })
 
-const group = document.querySelector(".group");
-const output = document.querySelector(".output");
+// const group = document.querySelector(".group");
+// const output = document.querySelector(".output");
 
-const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
+// const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
 
-group.innerHTML = sizes.map((size) =>`<div>
-    <input type="radio" id="${size}" value="${size}" name="size">
-    <label for="${size}">${size}</label>
+// group.innerHTML = sizes.map((size) =>`<div>
+//     <input type="radio" id="${size}" value="${size}" name="size">
+//     <label for="${size}">${size}</label>
 
-  </div>`
-).join(" ");
+//   </div>`
+// ).join(" ");
 
-const RadioButton = document.querySelectorAll("input")
+// const RadioButton = document.querySelectorAll("input")
 
-for (const radioBtn of RadioButton){
-  radioBtn.addEventListener("change", ShowOutput)
-}
+// for (const radioBtn of RadioButton){
+//   radioBtn.addEventListener("change", ShowOutput)
+// }
 
-function ShowOutput (e){
-  console.log(e);
-  if(this.checked){
-    document.querySelector(".output").innerHTML = `You Selected ${this.value}`
-  }
-}
+// function ShowOutput (e){
+//   console.log(e);
+//   if(this.checked){
+//     document.querySelector(".output").innerHTML = `You Selected ${this.value}`
+//   }
+// }
+
+const btn = document.querySelector("#btn");
+
+btn.addEventListener("click", (e) => {
+  let checkbox = document.querySelectorAll("input[name='color']:checked");
+
+  let values = [];
+
+  checkbox.forEach((checkbox) => {
+    values.push(checkbox.value);
+  });
+
+  console.log(values);
+});
