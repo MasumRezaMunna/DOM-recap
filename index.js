@@ -311,16 +311,55 @@
 //   }
 // }
 
-const btn = document.querySelector("#btn");
+// const btn = document.querySelector("#btn");
 
-btn.addEventListener("click", (e) => {
-  let checkbox = document.querySelectorAll("input[name='color']:checked");
+// btn.addEventListener("click", (e) => {
+//   let checkbox = document.querySelectorAll("input[name='color']:checked");
 
-  let values = [];
+//   let values = [];
 
-  checkbox.forEach((checkbox) => {
-    values.push(checkbox.value);
-  });
+//   checkbox.forEach((checkbox) => {
+//     values.push(checkbox.value);
+//   });
 
-  console.log(values);
-});
+//   alert(values);
+// });
+
+
+const Framework = document.querySelector("#lang")
+const btnAdd = document.querySelector("#btnAdd")
+const list = document.querySelector("#list")
+const btnRemove = document.querySelector("#btnRemove")
+
+
+btnAdd.onclick = (e) =>{
+    e.preventDefault();
+
+    if(Framework.value == ""){
+      console.log("Please add an name")
+    }
+
+    const option = new Option(Framework.value);
+
+    list.add(option);
+
+    Framework.value = ""
+}
+
+let selected = [];
+
+
+btnRemove.onclick = (e)=>{
+  e.preventDefault();
+  
+  for(let i = 0; i < list.options.length; i++){
+    selected[i] = list.options[i].selected;
+  }
+  let index = list.options.length;
+
+  while(index--){
+    if(selected[index]){
+      list.remove(index)
+    }
+  }
+}

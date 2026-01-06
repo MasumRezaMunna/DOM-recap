@@ -20,6 +20,12 @@
             width: 300px;
         }
     </style> -->
+    <style>
+      select{
+        width: 20%;
+        height: auto;
+      }
+    </style>
   </head>
   <body>
     <!-- <button onclick="ClickMe()">click me to check time  and date</button>
@@ -86,7 +92,7 @@
  <p class="output"></p> -->
 
 
- <label for="">
+ <!-- <label for="">
   <input type="checkbox" name="color" value="green" id="">
   Green
  </label>
@@ -104,7 +110,23 @@
  </label>
 
  <button id="btn">Select your color</button>
- 
+  -->
+
+  <form action="">
+    <p>Language Name:</p>
+    <input type="text" id="lang">
+    <button id="btnAdd">Add</button>
+    <br>
+    <br>
+    <p>Framework List</p>
+    <select name="" id="list" multiple>
+
+    </select>
+    <br>
+    <br>
+    <button id="btnRemove">Remove Selected Framework</button>
+  </form>
+
 
     <script src="index.js"></script>
   </body>
