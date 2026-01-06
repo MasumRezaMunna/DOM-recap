@@ -326,40 +326,50 @@
 // });
 
 
-const Framework = document.querySelector("#lang")
-const btnAdd = document.querySelector("#btnAdd")
-const list = document.querySelector("#list")
-const btnRemove = document.querySelector("#btnRemove")
+// const Framework = document.querySelector("#lang")
+// const btnAdd = document.querySelector("#btnAdd")
+// const list = document.querySelector("#list")
+// const btnRemove = document.querySelector("#btnRemove")
 
 
-btnAdd.onclick = (e) =>{
-    e.preventDefault();
+// btnAdd.onclick = (e) =>{
+//     e.preventDefault();
 
-    if(Framework.value == ""){
-      console.log("Please add an name")
-    }
+//     if(Framework.value == ""){
+//       console.log("Please add an name")
+//     }
 
-    const option = new Option(Framework.value);
+//     const option = new Option(Framework.value);
 
-    list.add(option);
+//     list.add(option);
 
-    Framework.value = ""
-}
+//     Framework.value = ""
+// }
 
-let selected = [];
+// let selected = [];
 
 
-btnRemove.onclick = (e)=>{
-  e.preventDefault();
+// btnRemove.onclick = (e)=>{
+//   e.preventDefault();
   
-  for(let i = 0; i < list.options.length; i++){
-    selected[i] = list.options[i].selected;
-  }
-  let index = list.options.length;
+//   for(let i = 0; i < list.options.length; i++){
+//     selected[i] = list.options[i].selected;
+//   }
+//   let index = list.options.length;
 
-  while(index--){
-    if(selected[index]){
-      list.remove(index)
-    }
-  }
-}
+//   while(index--){
+//     if(selected[index]){
+//       list.remove(index)
+//     }
+//   }
+// }
+
+const message = document.querySelector("#message");
+const result = document.querySelector("#result")
+
+// message.addEventListener("change", () => {
+//   result.textContent = message.value;
+// })
+message.addEventListener("input", () => {
+  result.textContent = message.value;
+})
